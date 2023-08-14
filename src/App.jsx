@@ -12,6 +12,7 @@ const modData = data.map(person => {
               location={person.location}
               title={person.title}
               price={person.price}
+              spots={person.openSpots}
           />
 })
 
@@ -20,7 +21,9 @@ export default function App() {
       <div>
         <Navbar />
         <Hero />
-        {modData}
+        <section className="cards-list">
+          {modData}
+        </section>
       </div>
     )
 }
