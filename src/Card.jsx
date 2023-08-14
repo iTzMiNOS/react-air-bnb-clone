@@ -1,20 +1,20 @@
-import katie from "./katie.png"
-import star from "./star.png"
+/* eslint-disable react/prop-types */
+import star from "../public/images/star.png"
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className="person-card">
-            <img src={katie} className="person-image" /><br></br>
+            <img src={props.img} className="person-image" /><br></br>
             <div className="first-line">
                 <img src={star} className="star" />
-                <small>5.0&nbsp;</small>
-                <small className="trans-text">(6) USA</small>
+                <small>{props.rating}&nbsp;</small>
+                <small className="trans-text">({props.reviewCount}) {props.location}</small>
             </div>
             <div className="other-line">
-                <small>Life lessons with Katie Zaferes</small>
+                <small>{props.title}</small>
             </div>
             <div className="other-line">
-                <small className="bold-text">From 136$&nbsp;</small>
+                <small className="bold-text">From {props.price}$&nbsp;</small>
                 <small>/ per person</small>
             </div>
             

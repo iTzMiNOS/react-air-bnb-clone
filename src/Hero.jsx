@@ -1,4 +1,4 @@
-import grid from "./grid.png"
+import grid from "../public/images/grid.png"
 
 export default function Hero(){
     return (
